@@ -1,0 +1,45 @@
+body {
+    font-family: 'Roboto', sans-serif;  
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .compose {
+    font-size: 24px;
+    color: white;
+    background-color: red;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    
+  /*   transition-property: background-color;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 300ms; */
+    
+    /*short-hand property: */
+    transition: background-color 20ms ease-in-out 20ms;
+  }
+  
+  .compose:hover {
+    background-color: green;
+    cursor: pointer;
+  }
+
+  .compose:focus {
+    background-color: green;
+    cursor: pointer;
+  }
+
+  .compose:not(focus) {
+    background-color: green;
+    cursor: pointer;
+  }
