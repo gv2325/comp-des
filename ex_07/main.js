@@ -11,9 +11,22 @@ let tweets = {
     "tweetList": []
 }
 
-
+window.addEventListener('load', pageLoadFn)
 submitTweetButton.addEventListener('click', addTweet);
 tweetInput.addEventListener('keyup', updateTweetCount);
+
+/*setTimeout(() => {
+    localStorage.removeItem('tweets')
+    console.log('localStorage cleared')*/
+
+function pageLoadFn(event){
+    if(localStorage.getItem('tweets') === null){
+        return
+    } else {
+        tweets = JSON.parse(localStorage.getItem('tweets'))
+        tweets.tweetList.forEach(displayTweet)
+    }
+}
 
 function updateTweetCount(event){
     if(event.code == 'Backspace'){
